@@ -1,0 +1,43 @@
+
+import os
+from dotenv import load_dotenv
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import TextLoader
+from sentence_transformers import SentenceTransformer
+import chromadb
+from chromadb.utils import embedding_functions
+
+loader = TextLoader("document.txt")
+docs = loader.load()
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+    separators=["\n\n", "\n", " ", ""]
+)
+
+
+chunks = text_splitter.split_documents(docs)
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+embeddings = model.encode(docs)
+
+chroma_client = chromadb.PersistentClient(path="./my_chromadb")
+
+hf_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
+    model_name="all-MiniLM-L6-v2"
+)
+
+collection = chroma_client.get_or_create_collection(
+    name="my_documents", 
+    embedding_function=hf_ef
+)
+
+# ✅ Use your chunks from the splitter
+collection.add(
+    documents=[chunk.page_content for chunk in chunks],
+    metadatas=[chunk.metadata for chunk in chunks],
+    ids=[f"id_{i}" for i in range(len(chunks))]
+)
+
+print("Documents stored and embed")

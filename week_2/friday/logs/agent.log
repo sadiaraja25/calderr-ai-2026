@@ -1,0 +1,23 @@
+2026-07-22 22:25:46,809 - __main__ - INFO - Loaded .env from: /home/sadiaraja25/calderr-ai-2026/.env
+2026-07-22 22:25:46,809 - __main__ - INFO - GROQ_API_KEY loaded: gsk_Rt2Np2...
+2026-07-22 22:25:46,810 - __main__ - INFO - NEWS_API_KEY: ❌
+2026-07-22 22:25:46,810 - __main__ - INFO - WEATHER_API_KEY: ❌
+2026-07-22 22:26:56,619 - __main__ - INFO - Loaded .env from: /home/sadiaraja25/calderr-ai-2026/.env
+2026-07-22 22:26:56,619 - __main__ - INFO - GROQ_API_KEY loaded: gsk_Rt2Np2...
+2026-07-22 22:26:56,620 - __main__ - INFO - NEWS_API_KEY: ❌
+2026-07-22 22:26:56,620 - __main__ - INFO - WEATHER_API_KEY: ❌
+2026-07-22 22:27:55,113 - __main__ - INFO - Loaded .env from: /home/sadiaraja25/calderr-ai-2026/week_2/.env
+2026-07-22 22:27:55,113 - __main__ - INFO - GROQ_API_KEY loaded: gsk_Rt2Np2...
+2026-07-22 22:27:55,113 - __main__ - INFO - NEWS_API_KEY: ✅
+2026-07-22 22:27:55,113 - __main__ - INFO - WEATHER_API_KEY: ✅
+2026-07-22 22:27:57,747 - __main__ - INFO - Loaded .env from: /home/sadiaraja25/calderr-ai-2026/week_2/.env
+2026-07-22 22:27:57,748 - __main__ - INFO - GROQ_API_KEY loaded: gsk_Rt2Np2...
+2026-07-22 22:27:57,748 - __main__ - INFO - NEWS_API_KEY: ✅
+2026-07-22 22:27:57,749 - __main__ - INFO - WEATHER_API_KEY: ✅
+2026-07-22 22:27:58,532 - __main__ - INFO - Starting query: details about messi ...
+2026-07-22 22:27:58,533 - __main__ - INFO - === Iteration 1 ===
+2026-07-22 22:27:59,836 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-22 22:27:59,907 - __main__ - INFO - LLM response length: 1682
+2026-07-22 22:27:59,907 - __main__ - INFO - Parsed 0 tool calls: []
+2026-07-22 22:27:59,908 - __main__ - INFO - Final answer found (length: 1682)
+2026-07-22 22:27:59,908 - __main__ - INFO - Query complete. 0 tools used.
